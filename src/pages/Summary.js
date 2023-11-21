@@ -1,26 +1,13 @@
-import Navbar from "../components/Navbar/Navbar";
+import Header from "../components/Layout/Header";
 import Step from "../components/Checkout/Step";
 import Summary from "../components/Checkout/Summary";
-import Loading from "../components/Loading";
-import { useGlobalContext } from "../context/context";
-import Footer from "../components/Footer/Footer";
+import Footer from "../components/Layout/Footer";
 
 const SummaryPage = () => {
-  const { isLoading } = useGlobalContext();
-  if (isLoading) {
-    return (
-      <div>
-        <Navbar />
-        <div className="center-item">
-          <Loading />
-        </div>
-      </div>
-    );
-  }
   return (
     <>
       <div>
-        <Navbar />
+        <Header />
         <Step step={2} />
         <Summary />
       </div>

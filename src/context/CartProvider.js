@@ -59,6 +59,13 @@ const cartReducer = (state, action) => {
     };
   }
 
+  if (action.type === "REMOVE_ALL") {
+    return {
+      items: [],
+      totalAmount: 0,
+    };
+  }
+
   return defaultCartState;
 };
 
@@ -82,11 +89,18 @@ const CartProvider = (props) => {
     });
   };
 
+  const removeAllHandler = () => {
+    dispatchCartAction({
+      type: "REMOVE_ALL",
+    });
+  };
+
   const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemToCartHandler,
+    removeAllItem: removeAllHandler,
   };
 
   return (

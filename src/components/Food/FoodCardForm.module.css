@@ -1,20 +1,60 @@
 .form {
-    text-align: right;
+  text-align: right;
 }
 
 .form button {
-    font: inherit;
-    cursor: pointer;
-    background-color: #8a2b06;
-    border: 1px solid #8a2b06;
-    color: white;
-    padding: 0.25rem 2rem;
-    border-radius: 20px;
-    font-weight: bold;
+  font: inherit;
+  cursor: pointer;
+  background-color: #8a2b06;
+  border: 1px solid #8a2b06;
+  color: white;
+  padding: 0.25rem 2rem;
+  border-radius: 20px;
+  font-weight: bold;
 }
 
 .form button:hover,
 .form button:active {
-    background-color: #641e03;
-    border-color: #641e03;
+  background-color: #641e03;
+  border-color: #641e03;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 12px;
+  width: fit-content;
+}
+
+.buttonAdd {
+  width: 26px;
+  height: 22px;
+  border: 1px solid #8a2b06;
+  border-radius: 6px;
+  background-color: #8a2b06;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 15px;
+}
+
+.buttonAdd:hover {
+  background-color: #641e03;
+}
+
+.buttonInput {
+  height: 22px !important;
+  margin: 0;
+}
+
+.buttonAddCart {
+  border: 1px solid #8a2b06;
+  border-radius: 6px !important;
+  background-color: #8a2b06;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 16px;
 }

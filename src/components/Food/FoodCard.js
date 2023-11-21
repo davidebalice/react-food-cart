@@ -12,16 +12,24 @@ const FoodCard = (props) => {
       id: props.id,
       name: props.name,
       amount: amount,
+      photo: props.photo,
       price: props.price,
     });
   };
 
   return (
-    <li className={classes.meal}>
-      <div>
-        <h3>{props.name}</h3>
-        <div className={classes.description}>{props.description}</div>
-        <div className={classes.price}>{price}</div>
+    <li className={classes.food}>
+      <div className={classes.foodInt}>
+        <p className={classes.imgContainer}>
+          <img src={props.photo} className={classes.img} alt={props.name} />
+        </p>
+        <div className={classes.foodBottom}>
+          <div>
+            <h3>{props.name}</h3>
+            <div className={classes.description}>{props.description}</div>
+          </div>
+          <div className={classes.price}>{price}</div>
+        </div>
       </div>
       <div>
         <FoodCardForm id={props.id} onAddToCart={addToCartHandler} />

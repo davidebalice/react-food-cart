@@ -1,5 +1,5 @@
 import React from "react";
-import headerImg from "../../assets/images/meals.jpg";
+import headerImg from "../../assets/images/food.jpg";
 import classes from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton";
 import logo from "../../assets/images/logo_white.png";
@@ -10,9 +10,12 @@ const Header = (props) => {
     <>
       <header className={classes.header}>
         <div className={classes["header-container"]}>
-          <NavLink to="/">
-            <img src={logo} className={classes.logo} />
-          </NavLink>
+          <div className={classes.logoContainer}>
+            <NavLink to="/">
+              <img src={logo} className={classes.logo} alt="logo db" />
+            </NavLink>
+            <NavLink to="/" className={classes.menu}>Home</NavLink>
+          </div>
           <NavLink to="/cart">
             <HeaderCartButton />
           </NavLink>

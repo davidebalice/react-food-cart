@@ -12,10 +12,13 @@
     font-weight: bold;
     font-size: 1.5rem;
     margin: 1rem 0;
+    background:#f1f1f1;
+    padding:20px
   }
   
   .actions {
-    text-align: right;
+    text-align: center;
+    margin:40px
   }
   
   .actions button {
@@ -43,3 +46,15 @@
     background-color: #8a2b06;
     color: white;
   }
+
+  .checkoutButton{
+    background: #8a2b06 !important;
+    margin:0 auto;
+    margin:40px;
+    border: 1px solid #8a2b06;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    color:#fff
+  }
+
+

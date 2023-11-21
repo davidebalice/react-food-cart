@@ -4,6 +4,7 @@ import classes2 from "../Food/Food.module.css";
 import CartItem from "./CartItem";
 import CartContext from "../../context/CartContext";
 import Card from "../UI/Card";
+import { NavLink } from "react-router-dom";
 
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
@@ -27,6 +28,7 @@ const Cart = (props) => {
           name={item.name}
           amount={item.amount}
           price={item.price}
+          photo={item.photo}
           onAdd={cartItemAddHandler.bind(null, item)}
           onRemove={cartItemRemoveHandler.bind(null, item.id)}
         />
@@ -46,7 +48,13 @@ const Cart = (props) => {
             <span>{totalAmount}</span>
           </div>
           <div className={classes.actions}>
-            {hasItems && <button className={classes.button}>Order</button>}
+            {hasItems && (
+              <>
+                <NavLink to="/login" className={classes.buttonOrder}>
+                  <button className={classes.button}>Order</button>
+                </NavLink>
+              </>
+            )}
           </div>
         </Card>
       </section>

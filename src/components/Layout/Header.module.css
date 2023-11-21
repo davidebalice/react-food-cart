@@ -46,6 +46,12 @@
   height: 46px;
 }
 
+.logoContainer {
+  align-items: center;
+  display: flex;
+  gap:50px
+}
+
 .overText {
   width: 300px;
   height: 150px;
@@ -55,6 +61,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding:20px;
-  color:#fff;
+  padding: 20px;
+  color: #fff;
+}
+
+.menu {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }

@@ -10,9 +10,11 @@
 }
 
 .input input {
-    width: 3rem;
+    width: 30px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font: inherit;
-    padding-left: 0.5rem;
+    padding: 0;
+    text-align: center !important;
+    height:22px;
 }
