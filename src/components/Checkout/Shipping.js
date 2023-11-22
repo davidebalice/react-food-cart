@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 
 const Shipping = () => {
-  const { isLoggedIn, shippingData, setShippingData } = useContext(AuthContext);
+  const { isLoggedIn, setShippingData } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
@@ -42,7 +42,7 @@ const Shipping = () => {
                       </label>
                       <input
                         type="text"
-                        class="form-control form-input"
+                        class={`form-control ${classes.formInput}`}
                         id="name"
                         name="name"
                         required
@@ -54,7 +54,7 @@ const Shipping = () => {
                       </label>
                       <input
                         type="text"
-                        class="form-control form-input"
+                        class={`form-control ${classes.formInput}`}
                         id="surname"
                         name="surname"
                         required
@@ -66,7 +66,7 @@ const Shipping = () => {
                       </label>
                       <input
                         type="text"
-                        class="form-control form-input"
+                        class={`form-control ${classes.formInput}`}
                         id="address"
                         name="address"
                         required
@@ -81,7 +81,7 @@ const Shipping = () => {
                       </label>
                       <input
                         type="text"
-                        class="form-control form-input"
+                        class={`form-control ${classes.formInput}`}
                         id="city"
                         name="city"
                         required
@@ -93,7 +93,7 @@ const Shipping = () => {
                       </label>
                       <input
                         type="email"
-                        class="form-control form-input"
+                        class={`form-control ${classes.formInput}`}
                         id="email"
                         name="email"
                         required
@@ -105,7 +105,7 @@ const Shipping = () => {
                       </label>
                       <input
                         type="tel"
-                        class="form-control form-input"
+                        class={`form-control ${classes.formInput}`}
                         id="tel"
                         name="tel"
                         required

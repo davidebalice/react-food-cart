@@ -5,7 +5,6 @@ import CartContext from "../../context/CartContext";
 import classes from "./Checkout.module.css";
 import classes2 from "../Cart/Cart.module.css";
 import SummaryItem from "./SummaryItem";
-import formatNumber from "../../utils/formatNumber";
 import Button from "react-bootstrap/Button";
 
 const Confirm = () => {
@@ -38,7 +37,6 @@ const Confirm = () => {
       total: totalAmount,
       placed: true,
     }));
-    // deleteAll();
     cartCtx.removeAllItem();
   };
 
@@ -98,46 +96,38 @@ const Confirm = () => {
                 </p>
                 <br />
                 <div className={classes.dataContainer}>
-                  <div className="cart-info">
-                    <h6>Item</h6>
-                    <h6 className="prd-name">Description</h6>
-                    <h6>Qty</h6>
-                    <h6>Price</h6>
-                    <h6>Total</h6>
-                  </div>
-                  <hr />
                   <section className="cart-section">
                     {cartCtx.items.map((el) => {
                       return <SummaryItem key={el._id} {...el} />;
                     })}
                   </section>
-                </div>
-                {cartCtx.items.length > 0 && (
-                  <section
-                    className={`${classes2.cartContainer} total-section section-center`}
-                  >
-                    <div className={`${classes2.totalContainer} card w-100`}>
-                      <div className={classes2.totalBox}>
-                        <div className="card-content">
-                          <h4> Total </h4>
+                  {cartCtx.items.length > 0 && (
+                    <section
+                      className={`${classes2.cartContainer} total-section section-center`}
+                    >
+                      <div className={`${classes2.totalContainer}  w-100`}>
+                        <div className={classes2.total}>
+                          <div className="card-content">
+                            <h4> Total </h4>
+                          </div>
+                          <div className="card-content">
+                            <h4>{totalAmount}</h4>
+                          </div>
                         </div>
-                        <div className="card-content">
-                          <h4>{totalAmount}</h4>
-                        </div>
-                      </div>
 
-                      <div className={classes2.totalFooter}>
-                        <Button
-                          variant="primary"
-                          className={classes2.checkoutButton}
-                          onClick={createOrder}
-                        >
-                          Confirm
-                        </Button>
+                        <div className={classes2.actions}>
+                          <Button
+                            variant="primary"
+                            className={classes2.checkoutButton}
+                            onClick={createOrder}
+                          >
+                            Confirm order
+                          </Button>
+                        </div>
                       </div>
-                    </div>
-                  </section>
-                )}
+                    </section>
+                  )}
+                </div>
                 <br />
                 <br />
               </>

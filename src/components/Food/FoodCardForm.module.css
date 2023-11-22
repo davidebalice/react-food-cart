@@ -36,6 +36,11 @@
   font-weight: bold;
   text-align: center;
   line-height: 15px;
+  transition: transform 0.3s ease;
+}
+
+.buttonAdd:active {
+  transform: scale(0.84);
 }
 
 .buttonAdd:hover {
@@ -57,4 +62,9 @@
   text-align: center;
   margin-top: 5px;
   font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.buttonAddCart:active {
+  transform: scale(0.84);
 }

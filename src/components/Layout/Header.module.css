@@ -53,16 +53,22 @@
 }
 
 .overText {
-  width: 300px;
+  width: 360px;
+  max-width: 92%;
   height: 150px;
   margin: 0 auto;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.75);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 18px;
   padding: 20px;
   color: #fff;
+  text-align: center;
 }
 
 .menu {

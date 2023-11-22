@@ -40,22 +40,31 @@ const Cart = (props) => {
     <>
       <section className={classes2.food}>
         <Card>
-          <ul>{items}</ul>
-          <br />
-          <br />
-          <div className={classes.total}>
-            <span>Total amount</span>
-            <span>{totalAmount}</span>
-          </div>
-          <div className={classes.actions}>
-            {hasItems && (
-              <>
-                <NavLink to="/login" className={classes.buttonOrder}>
-                  <button className={classes.button}>Order</button>
-                </NavLink>
-              </>
-            )}
-          </div>
+          {hasItems ? (
+            <>
+              {" "}
+              <ul>{items}</ul>
+              <br />
+              <br />
+              <div className={classes.total}>
+                <span>Total amount</span>
+                <span>{totalAmount}</span>
+              </div>
+              <div className={classes.actions}>
+                {hasItems && (
+                  <>
+                    <NavLink to="/login" className={classes.buttonOrder}>
+                      <button className={classes.button}>Order</button>
+                    </NavLink>
+                  </>
+                )}
+              </div>
+            </>
+          ) : (
+            <>
+              <h5 style={{textAlign:'center'}}><br /><br />Cart is empty</h5>
+            </>
+          )}
         </Card>
       </section>
     </>

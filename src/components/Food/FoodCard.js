@@ -25,7 +25,7 @@ const FoodCard = (props) => {
         </p>
         <div className={classes.foodBottom}>
           <div>
-            <h3>{props.name}</h3>
+            <h3 className={classes.title}>{props.name}</h3>
             <div className={classes.description}>{props.description}</div>
           </div>
           <div className={classes.price}>{price}</div>

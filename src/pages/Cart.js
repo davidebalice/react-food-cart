@@ -8,7 +8,10 @@ function App() {
   return (
     <>
       <Header />
-      <Cart />
+      <div className="main">
+        <Cart />
+      </div>
+      <Footer />
     </>
   );
 }

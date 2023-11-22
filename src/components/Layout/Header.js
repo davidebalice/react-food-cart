@@ -22,7 +22,11 @@ const Header = (props) => {
         </div>
       </header>
       <div className={classes.hero}>
-        <div className={classes.overText}>aaaaaaaaaaaaaa</div>
+        <div className={classes.overText}>
+          
+          Example of implemetation of a food cart developed in React
+
+        </div>
         <img src={headerImg} alt="food" />
       </div>
     </>

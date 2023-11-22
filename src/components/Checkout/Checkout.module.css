@@ -165,13 +165,13 @@ input[type="submit"]:hover {
   background: #8a2b05 !important;
   transition: background 0.4s;
   border: none !important;
-  padding: 8px;
+  padding: 8px 20px !important;
+  border-radius:20px !important;
   color:#fff
 }
 .button:hover {
   background: #923915;
 }
-
 .info {
   color: #777;
   border: 1px dashed #777;
@@ -180,17 +180,14 @@ input[type="submit"]:hover {
   padding: 12px;
   margin-bottom: 28px;
 }
-
 .shippingdataRow {
   display: flex;
   font-size: 14px;
 }
-
 .shippingdataCol1 {
   font-weight: bold;
   width: 130px;
 }
-
 .dataContainer {
   background: #fff;
   border: 1px solid #ddd;
@@ -199,4 +196,7 @@ input[type="submit"]:hover {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+.formInput{
+  background:#f1f1f1 !important
 }

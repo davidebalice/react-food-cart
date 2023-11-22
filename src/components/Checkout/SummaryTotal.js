@@ -12,7 +12,7 @@ const SummaryTotal = () => {
     <section
       className={`${classes.cartContainer} total-section section-center`}
     >
-      <div className={`${classes.totalContainer}  w-100`}>
+      <div className={`${classes.totalContainer} w-100`}>
         <div className={classes.total}>
           <span>Total amount</span>
           <span>{totalAmount}</span>

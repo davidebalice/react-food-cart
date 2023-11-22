@@ -374,3 +374,6 @@ template {
   color: #61dafb;
 }
 
+.main{
+  min-height: calc(100vh - 576px);
+}
